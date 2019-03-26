@@ -33,7 +33,7 @@ namespace Equinox.Infra.Data.Context
                 .Build();
             
             // define the database to use
-            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseMySql(config.GetConnectionString("DefaultConnection"));
         }
     }
 }

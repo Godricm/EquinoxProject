@@ -26,7 +26,7 @@ namespace Equinox.Infra.CrossCutting.Identity.Data
                 .Build();
 
             // define the database to use
-            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+            //optionsBuilder.UseMySql(config.GetConnectionString("DefaultConnection"));
         }
     }
 }
