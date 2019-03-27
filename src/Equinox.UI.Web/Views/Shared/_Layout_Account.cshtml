@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Equinox Project</title>
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/adminLTE/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/adminLTE/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/adminLTE/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/adminLTE/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/adminLTE/css/iCheck/square/blue.css">
+    @RenderSection("styles", false)
+</head>
+<body class="hold-transition login-page">
+
+    @RenderBody()
+
+    <!-- jQuery 3 -->
+    <script src="~/adminLTE/js/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/adminLTE/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/adminLTE/js/icheck.min.js"></script>
+    <!-- Bootstrap-validator-0.11.9 -->
+    <script src="~/adminLTE/js/validator.min.js"></script>
+    @RenderSection("scripts", false)
+    </body>
+</html>
