@@ -8,14 +8,12 @@ namespace Equinox.Infra.Data.Context
 {
     public class EquinoxContext : DbContext
     {
-        private readonly IHostingEnvironment _env;
+		public EquinoxContext(
+					  DbContextOptions<EquinoxContext> options) : base(options)
+		{
+		}
 
-        public EquinoxContext(IHostingEnvironment env)
-        {
-            _env = env;
-        }
-
-        public DbSet<Customer> Customers { get; set; }
+		public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,16 +22,16 @@ namespace Equinox.Infra.Data.Context
             base.OnModelCreating(modelBuilder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            // get the configuration from the app settings
-            var config = new ConfigurationBuilder()
-                .SetBasePath(_env.ContentRootPath)
-                .AddJsonFile("appsettings.json")
-                .Build();
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    // get the configuration from the app settings
+        //    var config = new ConfigurationBuilder()
+        //        .SetBasePath(_env.ContentRootPath)
+        //        .AddJsonFile("appsettings.json")
+        //        .Build();
             
-            // define the database to use
-            optionsBuilder.UseMySql(config.GetConnectionString("DefaultConnection"));
-        }
+        //    // define the database to use
+        //    optionsBuilder.UseMySql(config.GetConnectionString("DefaultConnection"));
+        //}
     }
 }

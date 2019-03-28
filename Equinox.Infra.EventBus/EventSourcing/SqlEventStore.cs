@@ -1,9 +1,9 @@
 ﻿using Equinox.Domain.Core.Events;
 using Equinox.Domain.Interfaces;
-using Equinox.Infra.Data.Repository.EventSourcing;
+using Equinox.Infra.EventBus.Repository;
 using Newtonsoft.Json;
 
-namespace Equinox.Infra.Data.EventSourcing
+namespace Equinox.Infra.EventBus.EventSourcing
 {
     public class SqlEventStore : IEventStore
     {

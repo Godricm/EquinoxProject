@@ -2,6 +2,8 @@
 using Equinox.Infra.CrossCutting.Identity.Data;
 using Equinox.Infra.CrossCutting.Identity.Models;
 using Equinox.Infra.CrossCutting.IoC;
+using Equinox.Infra.Data.Context;
+using Equinox.Infra.EventBus.Context;
 using Equinox.UI.Web.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -31,8 +33,11 @@ namespace Equinox.UI.Web
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+			services.AddDbContext<EquinoxContext>(options =>
+			  options.UseMySql(Configuration.GetConnectionString("EquinoxConnection")));
+			services.AddDbContext<EventStoreSQLContext>(options =>
+			  options.UseMySql(Configuration.GetConnectionString("EventStoreConnection")));
+			services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 

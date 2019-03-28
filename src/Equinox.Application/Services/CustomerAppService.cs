@@ -8,7 +8,7 @@ using Equinox.Application.ViewModels;
 using Equinox.Domain.Commands;
 using Equinox.Domain.Core.Bus;
 using Equinox.Domain.Interfaces;
-using Equinox.Infra.Data.Repository.EventSourcing;
+using Equinox.Infra.EventBus.Repository;
 
 namespace Equinox.Application.Services
 {

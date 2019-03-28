@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Collections.Generic;
 using Equinox.Domain.Core.Events;
-using Equinox.Infra.Data.Context;
+using Equinox.Infra.EventBus.Context;
 
-namespace Equinox.Infra.Data.Repository.EventSourcing
+namespace Equinox.Infra.EventBus.Repository
 {
     public class EventStoreSQLRepository : IEventStoreRepository
     {

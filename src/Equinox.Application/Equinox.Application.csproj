@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Equinox.Infra.EventBus\Equinox.Infra.EventBus.csproj" />
     <ProjectReference Include="..\Equinox.Domain\Equinox.Domain.csproj" />
     <ProjectReference Include="..\Equinox.Infra.Data\Equinox.Infra.Data.csproj" />
   </ItemGroup>

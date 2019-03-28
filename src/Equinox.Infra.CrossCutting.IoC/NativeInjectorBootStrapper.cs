@@ -13,14 +13,15 @@ using Equinox.Infra.CrossCutting.Identity.Authorization;
 using Equinox.Infra.CrossCutting.Identity.Models;
 using Equinox.Infra.CrossCutting.Identity.Services;
 using Equinox.Infra.Data.Context;
-using Equinox.Infra.Data.EventSourcing;
+using Equinox.Infra.EventBus.EventSourcing;
 using Equinox.Infra.Data.Repository;
-using Equinox.Infra.Data.Repository.EventSourcing;
+using Equinox.Infra.EventBus.Repository;
 using Equinox.Infra.Data.UoW;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Equinox.Infra.EventBus.Context;
 
 namespace Equinox.Infra.CrossCutting.IoC
 {

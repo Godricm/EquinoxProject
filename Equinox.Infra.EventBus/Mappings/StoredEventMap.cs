@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Equinox.Domain.Core.Events;
 
-namespace Equinox.Infra.Data.Mappings
+namespace Equinox.Infra.EventBus.Mappings
 {    
     public class StoredEventMap : IEntityTypeConfiguration<StoredEvent>
     {

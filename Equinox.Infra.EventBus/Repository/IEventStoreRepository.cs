@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Equinox.Domain.Core.Events;
 
-namespace Equinox.Infra.Data.Repository.EventSourcing
+namespace Equinox.Infra.EventBus.Repository
 {
     public interface IEventStoreRepository : IDisposable
     {
