@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Equinox.UI.Web
 {
@@ -39,6 +40,7 @@ namespace Equinox.UI.Web
                 .AddCookie(o => {
                     o.LoginPath = new PathString("/login");
                     o.AccessDeniedPath = new PathString("/home/access-denied");
+					o.ExpireTimeSpan = TimeSpan.FromDays(1);
                 })
                 .AddFacebook(o =>
                 {
