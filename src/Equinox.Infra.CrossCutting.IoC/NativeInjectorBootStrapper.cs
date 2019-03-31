@@ -1,12 +1,12 @@
 ﻿using Equinox.Application.Interfaces;
 using Equinox.Application.Services;
 using Equinox.Domain.CommandHandlers;
-using Equinox.Domain.Commands;
+using Equinox.Domain.Commands.Customer;
 using Equinox.Domain.Core.Bus;
 using Equinox.Domain.Core.Events;
 using Equinox.Domain.Core.Notifications;
 using Equinox.Domain.EventHandlers;
-using Equinox.Domain.Events;
+using Equinox.Domain.Events.Customer;
 using Equinox.Domain.Interfaces;
 using Equinox.Infra.CrossCutting.Bus;
 using Equinox.Infra.CrossCutting.Identity.Authorization;

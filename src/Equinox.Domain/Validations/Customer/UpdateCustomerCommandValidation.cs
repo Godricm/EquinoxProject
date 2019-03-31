@@ -1,6 +1,6 @@
 ﻿using Equinox.Domain.Commands.Customer;
 
-namespace Equinox.Domain.Validations
+namespace Equinox.Domain.Validations.Customer
 {
     public class UpdateCustomerCommandValidation : CustomerValidation<UpdateCustomerCommand>
     {

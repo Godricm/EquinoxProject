@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Equinox.Domain.Events;
+using Equinox.Domain.Events.Customer;
 using MediatR;
 
 namespace Equinox.Domain.EventHandlers

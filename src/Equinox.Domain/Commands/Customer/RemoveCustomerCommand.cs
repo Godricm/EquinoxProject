@@ -1,5 +1,5 @@
 ﻿using System;
-using Equinox.Domain.Validations;
+using Equinox.Domain.Validations.Customer;
 
 namespace Equinox.Domain.Commands.Customer
 {

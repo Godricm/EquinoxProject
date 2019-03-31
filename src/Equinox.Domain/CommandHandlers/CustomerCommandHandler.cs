@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Equinox.Domain.Commands.Customer;
 using Equinox.Domain.Core.Bus;
 using Equinox.Domain.Core.Notifications;
-using Equinox.Domain.Events;
+using Equinox.Domain.Events.Customer;
 using Equinox.Domain.Interfaces;
 using Equinox.Domain.Models;
 using MediatR;
