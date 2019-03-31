@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\EquinoxContextFactory.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Equinox.Domain\Equinox.Domain.csproj" />
   </ItemGroup>
 
@@ -41,10 +37,6 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
