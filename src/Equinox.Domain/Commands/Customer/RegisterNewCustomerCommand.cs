@@ -1,7 +1,7 @@
 ﻿using System;
 using Equinox.Domain.Validations;
 
-namespace Equinox.Domain.Commands
+namespace Equinox.Domain.Commands.Customer
 {
     public class RegisterNewCustomerCommand : CustomerCommand
     {

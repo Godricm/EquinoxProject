@@ -1,7 +1,7 @@
 ﻿using System;
 using Equinox.Domain.Core.Commands;
 
-namespace Equinox.Domain.Commands
+namespace Equinox.Domain.Commands.Customer
 {
     public abstract class CustomerCommand : Command
     {
