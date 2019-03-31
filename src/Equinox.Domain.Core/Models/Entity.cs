@@ -6,7 +6,43 @@ namespace Equinox.Domain.Core.Models
     {
         public T Id { get; protected set; }
 
-        public override bool Equals(object obj)
+		/// <summary>
+		/// 是否删除
+		/// </summary>
+		public bool DeletionStateCode { get; set; }
+
+		/// <summary>
+		/// 备注
+		/// </summary>
+		public string Remark { get; protected set; }
+
+		/// <summary>
+		/// 创建日期
+		/// </summary>
+		public DateTime CreateOn { get; protected set; }
+		/// <summary>
+		/// 创建人Id
+		/// </summary>
+		public string CreateUserId { get; protected set; }
+		/// <summary>
+		/// 创建人名称
+		/// </summary>
+		public string CreateBy { get; protected set; }
+		/// <summary>
+		/// 更新时间
+		/// </summary>
+		public DateTime ModifiedOn { get; protected set; }
+		/// <summary>
+		/// 更新人Id
+		/// </summary>
+		public string ModifiedUserId { get; protected set; }
+		/// <summary>
+		/// 更新人名称
+		/// </summary>
+		public string ModifiedBy { get; protected set; }
+
+
+		public override bool Equals(object obj)
         {
             var compareTo = obj as Entity<T>;
 
