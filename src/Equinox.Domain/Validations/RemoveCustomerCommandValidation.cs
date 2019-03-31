@@ -1,4 +1,4 @@
-﻿using Equinox.Domain.Commands;
+﻿using Equinox.Domain.Commands.Customer;
 
 namespace Equinox.Domain.Validations
 {

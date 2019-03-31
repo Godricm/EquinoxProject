@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Equinox.Domain.Commands;
+using Equinox.Domain.Commands.Customer;
 using Equinox.Domain.Core.Bus;
 using Equinox.Domain.Core.Notifications;
 using Equinox.Domain.Events;
