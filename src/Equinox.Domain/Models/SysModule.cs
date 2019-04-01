@@ -9,10 +9,25 @@ namespace Equinox.Domain.Models
 	[Table("sys_module")]
 	public class SysModule : Entity<string>
 	{
-		public SysModule()
+        private string v;
+
+        public SysModule()
 		{
-		} 
-		public SysModule(string id, bool deletionStateCode, string remark, DateTime createOn, string createUserId, string createBy, DateTime modifiedOn, string modifiedUserId, string modifiedBy) : base(id, deletionStateCode, remark, createOn, createUserId, createBy, modifiedOn, modifiedUserId, modifiedBy)
+		}
+
+        public SysModule(string id, string parentId, string categoryCode, string moduleName, bool isMenu, bool isEnabled, bool deletionStateCode, string remark)
+        {
+            Id = id;
+            ParentId = parentId;
+            CategoryCode = categoryCode;
+            ModuleName = moduleName;
+            IsMenu = isMenu;
+            IsEnabled = isEnabled;
+            DeletionStateCode = deletionStateCode;
+            Remark = remark;
+        }
+
+        public SysModule(string id, bool deletionStateCode, string remark, DateTime createOn, string createUserId, string createBy, DateTime modifiedOn, string modifiedUserId, string modifiedBy) : base(id, deletionStateCode, remark, createOn, createUserId, createBy, modifiedOn, modifiedUserId, modifiedBy)
 		{
 		}
 		 
