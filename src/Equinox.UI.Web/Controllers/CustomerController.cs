@@ -29,15 +29,15 @@ namespace Equinox.UI.Web.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [Route("customer-management/customer-details/{id:guid}")]
-        public IActionResult Details(Guid? id)
+        [Route("customer-management/customer-details/{id:string}")]
+        public IActionResult Details(string id)
         {
-            if (id == null)
+            if (string.IsNullOrWhiteSpace(id))
             {
                 return NotFound();
             }
 
-            var customerViewModel = _customerAppService.GetById(id.Value);
+            var customerViewModel = _customerAppService.GetById(id);
 
             if (customerViewModel == null)
             {
@@ -72,15 +72,15 @@ namespace Equinox.UI.Web.Controllers
         
         [HttpGet]
         [Authorize(Policy = "CanWriteCustomerData")]
-        [Route("customer-management/edit-customer/{id:guid}")]
-        public IActionResult Edit(Guid? id)
+        [Route("customer-management/edit-customer/{id:string}")]
+        public IActionResult Edit(string id)
         {
-            if (id == null)
+            if (string.IsNullOrWhiteSpace(id))
             {
                 return NotFound();
             }
 
-            var customerViewModel = _customerAppService.GetById(id.Value);
+            var customerViewModel = _customerAppService.GetById(id);
 
             if (customerViewModel == null)
             {
@@ -92,7 +92,7 @@ namespace Equinox.UI.Web.Controllers
 
         [HttpPost]
         [Authorize(Policy = "CanWriteCustomerData")]
-        [Route("customer-management/edit-customer/{id:guid}")]
+        [Route("customer-management/edit-customer/{id:string}")]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(CustomerViewModel customerViewModel)
         {
@@ -108,15 +108,15 @@ namespace Equinox.UI.Web.Controllers
 
         [HttpGet]
         [Authorize(Policy = "CanRemoveCustomerData")]
-        [Route("customer-management/remove-customer/{id:guid}")]
-        public IActionResult Delete(Guid? id)
+        [Route("customer-management/remove-customer/{id:string}")]
+        public IActionResult Delete(string id)
         {
-            if (id == null)
+            if (string.IsNullOrWhiteSpace(id))
             {
                 return NotFound();
             }
 
-            var customerViewModel = _customerAppService.GetById(id.Value);
+            var customerViewModel = _customerAppService.GetById(id);
 
             if (customerViewModel == null)
             {
@@ -128,9 +128,9 @@ namespace Equinox.UI.Web.Controllers
 
         [HttpPost, ActionName("Delete")]
         [Authorize(Policy = "CanRemoveCustomerData")]
-        [Route("customer-management/remove-customer/{id:guid}")]
+        [Route("customer-management/remove-customer/{id:string}")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(Guid id)
+        public IActionResult DeleteConfirmed(string id)
         {
             _customerAppService.Remove(id);
 
@@ -141,8 +141,8 @@ namespace Equinox.UI.Web.Controllers
         }
 
         [AllowAnonymous]
-        [Route("customer-management/customer-history/{id:guid}")]
-        public JsonResult History(Guid id)
+        [Route("customer-management/customer-history/{id:string}")]
+        public JsonResult History(string id)
         {
             var customerHistoryData = _customerAppService.GetAllHistory(id);
             return Json(customerHistoryData);

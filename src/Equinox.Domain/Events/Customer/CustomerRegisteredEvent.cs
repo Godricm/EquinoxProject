@@ -5,7 +5,7 @@ namespace Equinox.Domain.Events.Customer
 {
     public class CustomerRegisteredEvent : Event
     {
-        public CustomerRegisteredEvent(Guid id, string name, string email, DateTime birthDate)
+        public CustomerRegisteredEvent(string id, string name, string email, DateTime birthDate)
         {
             Id = id;
             Name = name;
@@ -13,7 +13,7 @@ namespace Equinox.Domain.Events.Customer
             BirthDate = birthDate;
             AggregateId = id;
         }
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; private set; }
 

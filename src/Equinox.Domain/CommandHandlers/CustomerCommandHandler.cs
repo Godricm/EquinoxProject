@@ -36,7 +36,7 @@ namespace Equinox.Domain.CommandHandlers
                 return Task.FromResult(false);
             }
 
-            var customer = new Customer(Guid.NewGuid(), message.Name, message.Email, message.BirthDate);
+            var customer = new Customer(Guid.NewGuid().ToString("N"), message.Name, message.Email, message.BirthDate);
 
             if (_customerRepository.GetByEmail(customer.Email) != null)
             {

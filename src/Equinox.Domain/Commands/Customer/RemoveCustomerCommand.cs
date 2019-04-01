@@ -5,7 +5,7 @@ namespace Equinox.Domain.Commands.Customer
 {
     public class RemoveCustomerCommand : CustomerCommand
     {
-        public RemoveCustomerCommand(Guid id)
+        public RemoveCustomerCommand(string id)
         {
             Id = id;
             AggregateId = id;

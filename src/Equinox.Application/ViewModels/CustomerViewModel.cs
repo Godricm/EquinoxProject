@@ -7,7 +7,7 @@ namespace Equinox.Application.ViewModels
     public class CustomerViewModel
     {
         [Key]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [Required(ErrorMessage = "The Name is Required")]
         [MinLength(2)]

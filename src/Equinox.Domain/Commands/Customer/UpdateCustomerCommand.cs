@@ -5,7 +5,7 @@ namespace Equinox.Domain.Commands.Customer
 {
     public class UpdateCustomerCommand : CustomerCommand
     {
-        public UpdateCustomerCommand(Guid id, string name, string email, DateTime birthDate)
+        public UpdateCustomerCommand(string id, string name, string email, DateTime birthDate)
         {
             Id = id;
             Name = name;

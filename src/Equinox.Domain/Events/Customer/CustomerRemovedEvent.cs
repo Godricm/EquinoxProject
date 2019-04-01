@@ -5,12 +5,12 @@ namespace Equinox.Domain.Events.Customer
 {
     public class CustomerRemovedEvent : Event
     {
-        public CustomerRemovedEvent(Guid id)
+        public CustomerRemovedEvent(string id)
         {
             Id = id;
             AggregateId = id;
         }
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
     }
 }

@@ -9,9 +9,9 @@ namespace Equinox.Application.Interfaces
     {
         void Register(CustomerViewModel customerViewModel);
         IEnumerable<CustomerViewModel> GetAll();
-        CustomerViewModel GetById(Guid id);
+        CustomerViewModel GetById(string id);
         void Update(CustomerViewModel customerViewModel);
-        void Remove(Guid id);
-        IList<CustomerHistoryData> GetAllHistory(Guid id);
+        void Remove(string id);
+        IList<CustomerHistoryData> GetAllHistory(string id);
     }
 }

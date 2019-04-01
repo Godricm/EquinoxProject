@@ -3,9 +3,9 @@ using Equinox.Domain.Core.Models;
 
 namespace Equinox.Domain.Models
 {
-    public class Customer : Entity<Guid>
+    public class Customer : Entity<string>
     {
-        public Customer(Guid id, string name, string email, DateTime birthDate)
+        public Customer(string id, string name, string email, DateTime birthDate)
         {
             Id = id;
             Name = name;

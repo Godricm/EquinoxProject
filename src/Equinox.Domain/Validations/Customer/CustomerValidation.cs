@@ -31,7 +31,7 @@ namespace Equinox.Domain.Validations.Customer
         protected void ValidateId()
         {
             RuleFor(c => c.Id)
-                .NotEqual(Guid.Empty);
+                .NotEqual(string.Empty);
         }
 
         protected static bool HaveMinimumAge(DateTime birthDate)

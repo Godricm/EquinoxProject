@@ -35,7 +35,7 @@ namespace Equinox.Application.Services
             return _customerRepository.GetAll().ProjectTo<CustomerViewModel>(_mapper.ConfigurationProvider);
         }
 
-        public CustomerViewModel GetById(Guid id)
+        public CustomerViewModel GetById(string id)
         {
             return _mapper.Map<CustomerViewModel>(_customerRepository.GetById(id));
         }
@@ -52,13 +52,13 @@ namespace Equinox.Application.Services
             Bus.SendCommand(updateCommand);
         }
 
-        public void Remove(Guid id)
+        public void Remove(string id)
         {
             var removeCommand = new RemoveCustomerCommand(id);
             Bus.SendCommand(removeCommand);
         }
 
-        public IList<CustomerHistoryData> GetAllHistory(Guid id)
+        public IList<CustomerHistoryData> GetAllHistory(string id)
         {
             return CustomerHistory.ToJavaScriptCustomerHistory(_eventStoreRepository.All(id));
         }
