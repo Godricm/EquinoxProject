@@ -18,7 +18,7 @@ namespace Equinox.Infra.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CustomerMap());
-                        
+            modelBuilder.ApplyConfiguration(new SysModuleMap());
             base.OnModelCreating(modelBuilder);
         }
 
